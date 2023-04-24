@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+	<bean id="Marker" class="DTO.Marker">
+	<constructor-arg name="id" value="001"></constructor-arg>
+	<constructor-arg name="name" value="Reynolds"></constructor-arg>
+	<constructor-arg name="price" value="100"></constructor-arg>
+	</bean>
+	
+	<bean id="Mobile" class="DTO.Mobile">
+	<constructor-arg name="id" value="01"></constructor-arg>
+	<constructor-arg name="brand" value="Apple"></constructor-arg>
+	<constructor-arg name="price" value="100000"></constructor-arg>
+	<constructor-arg name="sim" ref="Sim1"></constructor-arg>
+	</bean>
+	
+	<bean id="Sim1" class="DTO.Sim">
+	<constructor-arg name="id" value="001"></constructor-arg>
+	<constructor-arg name="network" value="Jio"></constructor-arg>
+	<constructor-arg name="type" value="5G"></constructor-arg>
+	</bean>
+
+
+	
+
+</beans>	
